@@ -1,22 +1,36 @@
-<?php include_once("header.php") ?>
+<?php include_once("header.php");
 
+//Kolla bildens namn och hämta från det all relevant bilddata
+$imageName = $_GET['name'];
+
+$sql = "SELECT * FROM images WHERE imageName = '$imageName'";
+$res = mysqli_query($db, $sql);
+
+	while ($row = mysqli_fetch_assoc($res))
+		{
+			$imageID = $row['imageID'];
+			$imageName = $row['imageName'];
+			$imageSrc = $row['imageSrc'];
+			$thumbSrc = $row['thumbSrc'];
+			$description = $row['description'];
+			$uploadDate = $row['uploadDate'];
+			$user = $row['user'];
+			$ratingSum = $row['ratingSum'];
+			$ratingAmount = $row['ratingSum'];
+?>
 <div class="container">
 	<div class="row">
 		<div class="eightcol">
-			<img src="images/linus.jpg" alt="Linus">
+			<img src="<?php echo $imageSrc ?>" alt="<?php echo $imageName ?>">
 		</div>
 		<div class="fourcol last">
-			<h1>Rubrik</h1>
-			<p> Lorem ipsum </p>
-
-			Stars
-
+			<?php echo "<h1> $imageName </h1>" ?>
+			<?php echo "<p> $description </p>" ?>
+			<?php } ?>
+			
 			<form action="" method="">
 				<input type="hidden" name="imageID" value="<?php $imageID ?>">
-				
-
 			</form>
-			Buy
 		</div>
 	</div> <!-- /row -->
 </div> <!-- /container -->

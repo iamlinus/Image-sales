@@ -79,13 +79,13 @@ include_once("header.php") ?>
 
 		// Om det finns innehåll i POST ska vi skriva till DB
 		if ( !empty( $_POST['name'] ) && !empty( $_POST['description'] ) ) {
-			$insertSQL = "INSERT INTO images (imageName, imageSrc, thumbSrc, description, uploadDate, user) VALUE ('imageName', '$imageSrc', '$thumbSrc', '$description', NOW(), '$username')";
+			$insertSQL = "INSERT INTO images (imageName, imageSrc, thumbSrc, description, uploadDate, user) VALUE ('$imageName', '$imageSrc', '$thumbSrc', '$description', NOW(), '$username')";
 
 			//echo $insertSQL;
 			mysqli_query($db, $insertSQL);
 			echo "<p>Du har laddat upp en fil </p>";
 		
-		//Om det itne finns data i POST säger vi fy fy
+		//Om det inte finns data i POST säger vi fy fy
 		} else {
 			echo "<p>Fy fy! Du måste fylla i alla fält</p>";
 		}
