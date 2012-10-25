@@ -11,6 +11,11 @@
 
 			Stars
 
+			<form action="" method="">
+				<input type="hidden" name="imageID" value="<?php $imageID ?>">
+				
+
+			</form>
 			Buy
 		</div>
 	</div> <!-- /row -->
