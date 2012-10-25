@@ -1,0 +1,779 @@
+/* ============================== */
+/* ! Layout for desktop version   */
+/* ============================== */
+
+/*
+
+Theme Name: Apelöga
+Theme URI: http://www.apeloga.se
+Description: Tema för Apelöga. Bygger på Blass2. 
+Version: 1.0
+Tags: fixed width, two columns, widget ready, widgets, right sidebar, valid CSS, valid XHTML
+Author: Apelöga
+Author URI: http://www.apeloga.se
+
+*/
+
+/* body
+--------------------------------------------------*/
+@charset "UTF-8";
+@font-face
+{ 
+	font-family: "pictonic";
+	src: url("font/pictonic.eot");
+	src: url("font/pictonic.eot?#iefix") format("eot");
+}
+ 
+@font-face
+{ 
+	font-family: "pictonic";
+	src:url(http://:/) format("No-IE-404"),
+	url("font/pictonic.woff") format("woff"),
+	url("font/pictonic.ttf") format("truetype"),
+	url("font/pictonic.svg") format("svg");
+	font-weight: normal; font-style: normal;
+}
+
+
+.icon-adb-acrobat:before { content:""; } 
+.icon-adb-aftereffects:before { content:""; } 
+.icon-adb-audition:before { content:""; } 
+.icon-adb-contribute:before { content:""; } 
+.icon-adb-bridge:before { content:""; } 
+.icon-adb-dreamweaver:before { content:""; } 
+.icon-adb-encore:before { content:""; } 
+.icon-adb-fireworks:before { content:""; } 
+.icon-adb-flashbldr:before { content:""; } 
+.icon-adb-flash:before { content:""; } 
+.icon-adb-illustrator:before { content:""; } 
+.icon-adb-indesign:before { content:""; } 
+.icon-adb-lightroom:before { content:""; } 
+.icon-adb-onlocation:before { content:""; } 
+.icon-adb-photoshop:before { content:""; } 
+.icon-adb-prelude:before { content:""; } 
+.icon-adb-premiere:before { content:""; } 
+.icon-adb-framemaker:before { content:""; } 
+.icon-adb-captivate:before { content:""; } 
+.icon-adb-speedgrade:before { content:""; } 
+.icon-adb-robohelp:before { content:""; } 
+.icon-corel-draw:before { content:""; } 
+.icon-corel-painter:before { content:""; } 
+.icon-_x33_dsmax:before { content:""; } 
+.icon-softimage:before { content:""; } 
+.icon-lightwave:before { content:""; } 
+.icon-cinema4d:before { content:""; } 
+.icon-maya:before { content:""; } 
+.icon-autocad:before { content:""; } 
+.icon-autocad-lt:before { content:""; } 
+.icon-modo:before { content:""; } 
+.icon-sketchup-01:before { content:""; } 
+.icon-sketchup-02:before { content:""; } 
+.icon-solidworks:before { content:""; } 
+.icon-houdini:before { content:""; } 
+.icon-blender:before { content:""; } 
+.icon-vue:before { content:""; } 
+.icon-zbrush:before { content:""; } 
+.icon-os-osx_1_:before { content:""; } 
+.icon-os-apple:before { content:""; } 
+.icon-os-ios:before { content:""; } 
+.icon-os-win-01:before { content:""; } 
+.icon-os-win-02:before { content:""; } 
+.icon-os-win-03:before { content:""; } 
+.icon-os-win-04:before { content:""; } 
+.icon-os-linux_1_:before { content:""; } 
+.icon-os-ios-dark:before { content:""; } 
+.icon-os-osx-dark:before { content:""; } 
+.icon-os-apple-dark:before { content:""; } 
+.icon-os-win-01-dark:before { content:""; } 
+.icon-os-win-02-dark:before { content:""; } 
+.icon-os-win-03-dark:before { content:""; } 
+.icon-os-linux:before { content:""; } 
+.icon-os-win-04-dark:before { content:""; } 
+.icon-pl-dart:before { content:""; } 
+.icon-pl-clojure:before { content:""; } 
+.icon-pl-groovy-01:before { content:""; } 
+.icon-pl-groovy-02:before { content:""; } 
+.icon-dbs-mysql:before { content:""; } 
+.icon-dbs-postgresql:before { content:""; } 
+.icon-dbs-sqlserver:before { content:""; } 
+.icon-dbs-sqlite:before { content:""; } 
+.icon-dbs-mongodb:before { content:""; } 
+.icon-dbs-riak:before { content:""; } 
+.icon-dbs-couchdb:before { content:""; } 
+.icon-dbs-redis:before { content:""; } 
+.icon-dbs-hadoop:before { content:""; } 
+.icon-dbs-hbase:before { content:""; } 
+.icon-dbs-cassandra:before { content:""; } 
+.icon-dbs-couchbase-01:before { content:""; } 
+.icon-dbs-couchbase-02:before { content:""; } 
+.icon-dbs-neo4j:before { content:""; } 
+.icon-vc-svn:before { content:""; } 
+.icon-vc-git:before { content:""; } 
+.icon-vc-mercurial:before { content:""; } 
+.icon-vc-bitbucket-01:before { content:""; } 
+.icon-vc-bitbucket-02:before { content:""; } 
+.icon-vc-bazaar:before { content:""; } 
+.icon-vc-fossil:before { content:""; } 
+.icon-lin-ubuntu:before { content:""; } 
+.icon-lin-debian:before { content:""; } 
+.icon-lin-centos:before { content:""; } 
+.icon-lin-redhat:before { content:""; } 
+.icon-lin-fedora:before { content:""; } 
+.icon-github-02:before { content:""; } 
+.icon-instagram:before { content:""; } 
+.icon-soundcloud:before { content:""; } 
+.icon-github-01:before { content:""; } 
+.icon-rdio:before { content:""; } 
+.icon-svpply-01:before { content:""; } 
+.icon-grooveshark:before { content:""; } 
+.icon-svpply-02:before { content:""; } 
+.icon-spotify:before { content:""; } 
+.icon-creativesloth:before { content:""; } 
+.icon-prog-actionscript:before { content:""; } 
+.icon-prog-php01:before { content:""; } 
+.icon-prog-php02:before { content:""; } 
+.icon-prog-c:before { content:""; } 
+.icon-prog-ruby:before { content:""; } 
+.icon-prog-csharp:before { content:""; } 
+.icon-prog-cplusplus:before { content:""; } 
+.icon-prog-ccplusplus:before { content:""; } 
+.icon-prog-js01:before { content:""; } 
+.icon-prog-objc:before { content:""; } 
+.icon-prog-js02:before { content:""; } 
+.icon-prog-java:before { content:""; } 
+.icon-prog-dotnet:before { content:""; } 
+.icon-prog-vbnet:before { content:""; } 
+.icon-prog-aspnet:before { content:""; } 
+.icon-prog-visualstudio:before { content:""; } 
+.icon-prog-python:before { content:""; } 
+.icon-prog-lua01:before { content:""; } 
+.icon-prog-lua02:before { content:""; } 
+.icon-prog-air01:before { content:""; } 
+.icon-prog-air02:before { content:""; } 
+.icon-prog-jquery:before { content:""; } 
+.icon-prog-mootools:before { content:""; } 
+.icon-prog-nodejs01:before { content:""; } 
+.icon-prog-nodejs02:before { content:""; } 
+.icon-prog-codeign:before { content:""; } 
+.icon-prog-expression:before { content:""; } 
+.icon-prog-symfony:before { content:""; } 
+.icon-prog-yii:before { content:""; } 
+.icon-prog-zendfrm:before { content:""; } 
+.icon-prog-drupal:before { content:""; } 
+.icon-prog-joomla:before { content:""; } 
+.icon-prog-wordpress:before { content:""; } 
+.icon-prog-magento:before { content:""; } 
+.icon-prog-django:before { content:""; } 
+.icon-prog-rails:before { content:""; } 
+.icon-prog-erlang:before { content:""; } 
+.icon-prog-coffeescr:before { content:""; } 
+.icon-prog-perl:before { content:""; } 
+.icon-prog-fortran:before { content:""; } 
+.icon-prog-bash01:before { content:""; } 
+.icon-prog-bash02:before { content:""; } 
+.icon-prog-cobol:before { content:""; } 
+.icon-prog-delphi01:before { content:""; } 
+.icon-prog-matlab:before { content:""; } 
+.icon-prog-delphi02:before { content:""; } 
+.icon-prog-golang01:before { content:""; } 
+.icon-prog-golang02:before { content:""; } 
+.icon-prog-haskell:before { content:""; } 
+.icon-prog-scala:before { content:""; } 
+.icon-prog-lisp:before { content:""; } 
+.icon-prog-basic:before { content:""; } 
+.icon-aim:before { content:""; } 
+.icon-amazon:before { content:""; } 
+.icon-apple:before { content:""; } 
+.icon-baidu:before { content:""; } 
+.icon-bebo:before { content:""; } 
+.icon-behance:before { content:""; } 
+.icon-blinklist:before { content:""; } 
+.icon-blogger:before { content:""; } 
+.icon-blip:before { content:""; } 
+.icon-bookmark:before { content:""; } 
+.icon-delicious:before { content:""; } 
+.icon-design-float:before { content:""; } 
+.icon-deviantart:before { content:""; } 
+.icon-digg:before { content:""; } 
+.icon-dribbble:before { content:""; } 
+.icon-evernote:before { content:""; } 
+.icon-facebook:before { content:""; } 
+.icon-feedburner:before { content:""; } 
+.icon-flickr:before { content:""; } 
+.icon-formspring:before { content:""; } 
+.icon-forrst:before { content:""; } 
+.icon-foursquare_1:before { content:""; } 
+.icon-foursquare_2:before { content:""; } 
+.icon-fresqui:before { content:""; } 
+.icon-gmail:before { content:""; } 
+.icon-google:before { content:""; } 
+.icon-google__x2B_:before { content:""; } 
+.icon-friendfeed:before { content:""; } 
+.icon-hi5:before { content:""; } 
+.icon-hyves:before { content:""; } 
+.icon-identi-ca:before { content:""; } 
+.icon-imgur:before { content:""; } 
+.icon-instapaper:before { content:""; } 
+.icon-kaboodle:before { content:""; } 
+.icon-last_fm:before { content:""; } 
+.icon-linkedin:before { content:""; } 
+.icon-mail:before { content:""; } 
+.icon-myspace:before { content:""; } 
+.icon-netlog:before { content:""; } 
+.icon-news_for_gamers:before { content:""; } 
+.icon-newsvine:before { content:""; } 
+.icon-orkut:before { content:""; } 
+.icon-odnoklassniki:before { content:""; } 
+.icon-paypal:before { content:""; } 
+.icon-picasa:before { content:""; } 
+.icon-pinterest:before { content:""; } 
+.icon-rss:before { content:""; } 
+.icon-plaxo:before { content:""; } 
+.icon-reddit:before { content:""; } 
+.icon-share:before { content:""; } 
+.icon-sina:before { content:""; } 
+.icon-skype:before { content:""; } 
+.icon-technorati:before { content:""; } 
+.icon-stumble_upon:before { content:""; } 
+.icon-slash_dot:before { content:""; } 
+.icon-twitter-1:before { content:""; } 
+.icon-tumblr:before { content:""; } 
+.icon-twitter-3:before { content:""; } 
+.icon-twitter-2:before { content:""; } 
+.icon-typepad:before { content:""; } 
+.icon-vimeo:before { content:""; } 
+.icon-voxopolis:before { content:""; } 
+.icon-weblink_1:before { content:""; } 
+.icon-windows:before { content:""; } 
+.icon-weblink_2:before { content:""; } 
+.icon-xanga:before { content:""; } 
+.icon-wordpress:before { content:""; } 
+.icon-yahoo:before { content:""; } 
+.icon-yammer:before { content:""; } 
+.icon-xing:before { content:""; } 
+.icon-youtube:before { content:""; } 
+.icon-android:before { content:""; } 
+.icon-social-bakers:before { content:""; } 
+.icon-zerply:before { content:""; } 
+.icon-brw-opera:before { content:""; } 
+.icon-brw-explorer:before { content:""; } 
+.icon-brw-firefox:before { content:""; } 
+.icon-brw-safari-02:before { content:""; } 
+.icon-brw-safari-01:before { content:""; } 
+.icon-brw-chrome:before { content:""; } 
+.icon-googledrive-02:before { content:""; } 
+.icon-dropbox:before { content:""; } 
+.icon-googledrive-01:before { content:""; } 
+.icon-skydrive:before { content:""; }
+
+html
+{
+	font-size:100%;
+	background: url("images/mat_bg_purple.gif") repeat scroll 0 0 transparent;
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(102, 51, 102, 0.6)), to(rgba(150, 100, 150, 0.9))), url(images/mat_bg_black.gif);
+	background-image: -webkit-linear-gradient(rgba(102, 51, 102, 0.6), rgba(150, 100, 150, 0.9)), url(images/mat_bg_black.gif);
+	background-image: -moz-linear-gradient(rgba(102, 51, 102, 0.6), rgba(150, 100, 150, 0.9)), url(images/mat_bg_black.gif);
+	background-image: -o-linear-gradient(rgba(102, 51, 102, 0.6), rgba(150, 100, 150, 0.9)), url(images/mat_bg_black.gif);
+	background-image: linear-gradient(rgba(102, 51, 102, 0.6), rgba(150, 100, 150, 0.9)), url(images/mat_bg_black.gif);
+}
+body 
+{
+	color: #ffffff;
+	font: 14px "Arial","Lucida Sans Unicode",verdana,geneva,sans-serif;
+	margin: 0;
+	font-weight: normal;
+}
+
+* {
+margin:0;
+padding:0;
+}
+
+code {
+font-family: "Courier New", "Lucida Console", Arial;
+}
+
+p	{
+	line-height:1.7em;
+	margin-bottom:10px;
+	}
+
+
+a:link, a:visited {
+text-decoration:none;
+border-bottom: 1px dashed rgba(255, 255, 255, 0.7);
+color: rgba(255, 255, 255, 0.7);
+}
+
+a:hover, a:active {
+text-decoration:none;
+border-bottom: 1px dashed rgba(255, 255, 255, 1);
+color: #fff;
+color: rgba(255, 255, 255, 1);
+}
+
+h1 {
+    font-family: 'Amatic SC',cursive;
+    font-size: 62px;
+    line-height: 52px;
+    margin: 0 0 20px;
+	font-weight: normal;
+	color: #fff;
+}
+
+h2 {
+    font-family: 'Amatic SC',cursive;
+    font-size: 62px;
+    line-height: 52px;
+    margin: 0 0 20px;
+	font-weight: normal;
+	color: #fff;
+}
+
+h3 {
+    color: #F7EEFF;
+    font-family: 'Amatic SC',cursive;
+    font-size: 25px;
+    margin: 0 0 10px;
+	font-weight:normal;
+	color: #fff;
+	}
+
+.clear {
+clear:both;
+}
+
+/* header
+--------------------------------------------------*/
+#header {
+    border-bottom: 1px solid #CEB7C8;
+    display: inline-block;
+    margin: 0 auto 25px;
+    width: 100%;
+}
+
+#header .description {
+	float:right;
+	color:#333;
+	margin:45px 0 0;
+	}
+
+#wrapper {
+    margin: 0 auto;
+    width: 1020px;
+	overflow: hidden;
+}
+
+/* header h1 (blogtitle)
+--------------------------------------------------*/
+#header h1 {
+    background: url("images/vitlogo.png") no-repeat scroll 0 0 transparent;
+    height: 60px;
+    margin: 35px 0;
+    text-indent: -9999px;
+    width: 244px;
+    float: left;
+}
+
+#header h1 a {
+display:block;
+border: none;
+}
+
+/* navigation
+--------------------------------------------------*/
+
+.menu {
+    display: inline-block;
+    margin: 30px 0 15px 50px;
+    width: 700px;
+    min-height: 61px;
+	}
+
+.menu li {
+	margin: 0;
+	padding: 0;
+	float: left;
+	list-style: none;
+	}
+
+.menu li a:link, .menu li a:visited {
+    color: #FFFFFF;
+    display:inline-block;
+    font-weight: normal;
+    margin-top: 0;
+    padding: 10px 20px;
+    text-decoration: none;
+	text-transform:uppercase;
+	border: 1px solid #ceb7c8;
+	-moz-transition: all 0.3s ease-in-out 0s;
+}
+
+.menu li a:hover, .menu li a:active {
+background-color: #ceb7c8;
+-moz-transition: all 0.3s ease-in-out 0s;
+}
+
+.menu li:first-child {
+	border-left: 1px solid #ceb7c8;
+	}
+	
+.menu li.current_page_item a:visited, .menu li.current_page_item a:link, .menu li.current_page_item a:hover, .menu li.current_page_item a:active {
+    background-color: #CEB7C8;
+    color: #FFFFFF;
+    cursor: default;
+	}
+
+
+
+
+
+/* content
+--------------------------------------------------*/
+#content {
+    float: left;
+    margin: 0;
+    padding: 10px;
+    width: 650px;
+}
+
+#content2 {
+margin:0 !important;
+padding:10px;
+width:1000px;
+}
+
+#content ul,ol {
+
+margin:10px 10px 10px 25px;
+}
+
+#content2 ul,ol {
+margin:10px 10px 10px 25px;
+}
+
+
+/* blockquote + links
+--------------------------------------------------*/
+
+
+
+
+/* sidebar
+--------------------------------------------------*/
+#sidebar {
+    float: right;
+    height: 100%;
+    padding: 10px;
+    width: 250px;
+}
+
+#sidebar h2 {
+    color: #FFFFFF;
+    font-family: 'Amatic SC',cursive;
+    font-size: 21px;
+    margin-bottom: 4px;
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+#sidebar .widget{
+    float: left;
+    width: 100%;
+	clear:both;	
+	}
+
+#sidebar ul {
+list-style:none;
+margin:0 0 23px;
+}
+
+#sidebar li {
+list-style:none;
+line-height:1.7em;
+}
+
+.login-remember {
+    float: left;
+    font-size: 11px;
+    margin: -25px 0 0;
+	}
+
+.login-forgot{
+	float: right;
+    font-size: 11px;
+    margin: -15px 0 15px;
+    text-align: right;
+}
+
+input#rememberme {
+	width: auto;
+    padding: 0px;	
+	}
+
+input#wp-submit{
+	width: 150px;
+	float: right;
+	border: none;
+	line-height: 20px;
+    background-clip: padding-box;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: medium none;
+    border-radius: 8px 8px 8px 8px;
+    height: 40px;
+    font-family: 'Amatic SC',cursive;
+	font-size: 26px;
+	color: #fff;
+	margin: 0 0 20px 0;
+	padding: 0 10px;
+	}
+	
+input#wp-submit:hover{
+	box-shadow: 0 0 4px 0 #FFFFFF;	
+	cursor: pointer;
+	color: #fff;
+    background-color: rgba(255, 255, 255, 0.7);
+	}
+
+.register {
+	clear:both;
+	border-top: 1px solid #CEB7C8;
+	margin: 20px 0;
+	padding: 20px 0;
+	}
+
+span.error_msg {
+    background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 5px 2px red;    
+    clear: both;
+    float: left;
+    font-size: 12px;
+    line-height: 20px;
+    margin: 10px 0;
+    padding: 10px;
+    width: 90%;
+    border-radius: 8px 8px 8px 8px;
+}
+
+span.success_msg {
+    background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 5px 2px green;    
+    clear: both;
+    float: left;
+    font-size: 12px;
+    line-height: 20px;
+    margin: 10px 0;
+    padding: 10px;
+    width: 90%;
+    border-radius: 8px 8px 8px 8px;
+}
+
+#sidebar #searchsubmit{
+background:none;
+text-transform:uppercase;	
+color:#ffffff;
+padding:2px;
+	}
+
+
+/* Input and Watermarkify
+-------------------------------------------------- */
+
+input {
+background:#fff;
+color:#000000;
+font:11px "Arial", "Lucida Sans Unicode", Trebuchet MS;
+padding: 10px;
+margin: 10px 0;
+border-radius: 4px 4px 4px 4px;
+background-clip: padding-box;
+border: medium none;
+}
+
+input:focus {
+    box-shadow: 0 0 4px 0 #FFFFFF;
+}
+
+input#user_login{
+	background: url("images/username.gif") repeat-y scroll 6px 2px #fff;
+	padding: 10px 10px 10px 40px;
+	width: 200px;
+	margin: 10px 0;
+	}
+
+input#user_pass{
+	background: url("images/password.gif") repeat-y scroll 6px 2px #fff;
+	padding: 10px 10px 10px 40px;
+	width: 200px;
+	}
+
+input.add_user{
+	background: url("images/add_user.gif") repeat-y scroll 6px 2px #fff;
+	padding: 10px 10px 10px 40px;
+	width: 200px;
+	}
+
+input.user_pass2{
+	background: url("images/pass1.gif") repeat-y scroll 6px 2px #fff;
+	padding: 10px 10px 10px 40px;
+	width: 200px;
+	}
+
+input.user_pass1{
+	background: url("images/pass2.gif") repeat-y scroll 6px 2px #fff;
+	padding: 10px 10px 10px 40px;
+	width: 200px;
+	}
+
+input.user_email{
+	background: url("images/email.gif") repeat-y scroll 6px 2px #fff;
+	padding: 10px 10px 10px 40px;
+	width: 200px;
+	}
+
+
+
+/* wp stuff
+--------------------------------------------------*/
+
+.aligncenter {
+display:block;
+margin-left:auto;
+margin-right:auto;
+}
+
+.alignleft {
+    float: left;
+    margin: 3px 10px 5px 0;
+	clear:both;
+}
+
+.alignright {
+float:right;
+margin: 3px 0 5px 10px;
+clear:both;
+}
+
+.navigation {
+text-align:center;
+
+}
+
+.wp-caption {
+border:1px solid #ddd;
+text-align:center;
+background-color:#f3f3f3;
+padding:4px 0 0 0;
+-moz-border-radius:3px;
+-khtml-border-radius:3px;
+-webkit-border-radius:3px;
+border-radius:3px;
+margin:10px;
+}
+
+.wp-caption img {
+border:0 none;
+margin:0;
+padding:0;
+}
+
+
+.wp-caption-dd {
+font-size:11px;
+line-height:17px;
+margin:0;
+padding:0 4px 5px;
+}
+
+
+
+#content li,#content2 li {
+ line-height: 1.7em;
+}
+
+#login {
+	width: 320px;
+	margin: 60px auto;
+	}
+
+#login .submit {
+	clear: both;
+	display:block;
+	height: 50px;
+	
+	}
+
+/* footer
+--------------------------------------------------*/
+#footer {
+min-height:100px;
+margin:0;
+padding:20px 0;
+clear:both;
+border-top: 1px solid #CEB7C8;
+}
+
+form.nyhetsbrev{
+margin: 0 0 20px 0;	
+}
+
+#footer input.nyhetsbrev {
+width: 170px;
+float: left;
+	}
+
+#footer input.nyhetsbrevskicka{
+	width: 70px;
+	margin: 0 10px;
+	}
+
+.grid_4 {
+	width: 340px;
+	float: left;
+	}
+
+
+/* Gallery 
+------------------------------------------------*/
+
+.Gallery {
+
+}
+
+a.galleryitem {
+	height: 150px;
+	overflow: hidden;
+	margin-bottom: 10px;
+	border: none;
+}
+
+.galleryitem:nth-child(6n+6) {
+	color: fuchsia; 
+	margin: 0;
+}
+
+
+/* ============================= */
+/* ! Layout for mobile version   */
+/* ============================= */
+
+@media handheld, only screen and (max-width: 767px) {
+
+	body {
+		
+	}
+
+}
+
+
+/* ========================================== */
+/* ! Provide higher res assets for iPhone 4   */
+/* ========================================== */
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) { 
+
+/*	.logo {
+		background: url(logo2x.jpg) no-repeat;
+		background-size: 212px 303px;
+	}*/
+
+}
