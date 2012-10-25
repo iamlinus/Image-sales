@@ -1,6 +1,14 @@
-<?php session_start() ?>
+<?php 
+ob_start();
 
-<?php include_once("header.php") ?>
+session_start();
+
+if(isset($_SESSION['username'])){
+	header('Location: gallery.php');
+}
+
+include_once("header.php");
+?>
 
 <div class="container">
 	<div class="row">
@@ -27,16 +35,15 @@
 
 	    <?php
 
-			if (isset($_POST['password']))
+			if ( isset( $_POST['password'] )&&( isset( $_POST['username'] ) ) )
 			{
 				global $db;
-				$username = safeInsert($_POST['username']);
-				$password= $_POST['password'];
+				$username = safeInsert ($_POST['username']);
+				$password = md5 ($_POST['password']);
 
 				if (!empty($username)&&!empty($password)) {
 
 					$sql = "SELECT username, password from users WHERE username = '$username' LIMIT 1";
-					echo $sql;
 					$res = mysqli_query($db, $sql);
 					$row = mysqli_fetch_assoc($res);
 
@@ -47,11 +54,10 @@
 					elseif ($password == $row['password'] )
 					{
 						echo "korrekt!";
-						$_SESSION['username']= $username;
-							
+						$_SESSION['username'] = $username;
+						header('Location: gallery.php');
 					} else {
 						echo "Ikke korrekt!";	
-						die();
 					}
 				} else {
 					echo "Du måste mata in alla fält";
@@ -79,7 +85,7 @@
 					
 					$regUsername = safeInsert( $_POST['regUsername'] );
 					$regEmail = safeInsert( $_POST['email'] );
-					$regPassword = safeInsert( $_POST['pass2'] );
+					$regPassword = md5 ( $_POST['pass2'] );
 
 					if (!empty($regUsername)&&!empty($regEmail)&&!empty($regPassword))
 					{
@@ -88,6 +94,7 @@
 						//echo $insertSQL;
 						mysqli_query($db, $insertSQL);
 						echo "<p>Ditt konto är skapat. Du kan nu logga in på sidan.</p>";
+						echo $regPassword;
 					}
 				else
 				{
@@ -104,4 +111,9 @@
 	</div> <!-- /row -->
 </div> <!-- /container -->
 
-<?php include_once("footer.php") ?>
+<?php 
+include_once("footer.php");
+ob_end_flush();
+?>
+
+

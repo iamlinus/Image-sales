@@ -59,5 +59,6 @@
 			<li><a href="/">Hem</a></li>
 			<li><a href="/gallery.php">Galleri</a></li>
 			<li><a href="/upload.php">Ladda upp</a></li>
+			<li><a href="/destroy_session.php">Logga ut</a></li>
 		</ul>
 	</div> <!-- header slutar här -->

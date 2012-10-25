@@ -1,4 +1,14 @@
-<?php include_once("header.php") ?>
+<?php 
+session_start();
+
+if( !isset($_SESSION['username'])){
+	header('Location: index.php'); 
+}
+
+include_once("header.php");
+
+?>
+
 
 <div class="container">
 	<div class="row gallery">
@@ -18,4 +28,4 @@
 	</div> <!-- /row -->
 </div> <!-- /container -->
 
-<?php include_once("footer.php") ?>
+<?php include_once("footer.php")?>
